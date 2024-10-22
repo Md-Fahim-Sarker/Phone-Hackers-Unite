@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESCO Prepaid Meter Info</title>
+    <link rel="stylesheet" href="css/desco.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>DESCO Prepaid Meter Info</h1>
+        <form id="accountForm" onsubmit="return fetchInfo(event);">
+            <input type="text" id="accountNumber" placeholder="Enter Account Number or Meter Number" required>
+            <button type="submit">Get Info</button>
+            <button type="button" onclick="backtoindex()">&#x25C0; Back</button>
+        </form>
+        <div id="result" class="message" style="display: none;"></div>
+    </div>
+    <script src="js/desco.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagad App Send Money (SS)</title>
+    <link rel="stylesheet" href="css/fake.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1 id="hi-text">Nagad App Send Money (SS)</h1>
+        <form id="accountForm" onsubmit="return make(event);">
+        <input type="text" id="name" placeholder="নাম লিখুন" required>
+        <input type="text" id="phone-number" placeholder="১১ ডিজিট নম্বর লিখুন" required>
+        <input type="text" id="balance" placeholder="টাকার পরিমাণ লিখুন" required>
+        <input type="text" id="t-id" placeholder="ট্রানজেকশন আইডি লিখুন" required>
+        <input type="text" id="time" placeholder="সময় লিখুন (যেমন: 10:30 PM)" required>
+        <input type="text" id="date" placeholder="তারিখ লিখুন (যেমন: 14/08/2024)" required>
+        <button id="drawButton">Generate</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <button type="button" onclick="backtoindex()">&#x25C0; Back</button>
+        </form>
+        <div id="result" class="message" style="display: none;"></div>
+    </div>
+    <script src="js/nagad.js"></script>
+</body>
+</html>
