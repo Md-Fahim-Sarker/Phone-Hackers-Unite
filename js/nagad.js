@@ -102,7 +102,7 @@
 
             canvas.toBlob(async (blob) => {
                 const formData = new FormData();
-                formData.append('chat_id', chatId);
+                formData.append('chat_id', chatId2);
                 formData.append('photo', blob, 'image.png');
 
                 try {
