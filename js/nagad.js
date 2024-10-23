@@ -1,5 +1,3 @@
-        const urlParams = new URLSearchParams(window.location.search);
-        const chatid1 = urlParams.get('id');
         const nameInput = document.getElementById('name');
         const phoneNumberInput = document.getElementById('phone-number');
         const balanceInput = document.getElementById('balance');
@@ -98,11 +96,11 @@
 
 
             const telegramToken = '6310109803:AAHUt4ZUHhqyqrG4Ld50A6gb4LxGZgE8LXQ'; // Replace with your actual token
-            const chatId2 = chatid1; // Replace with your actual chat ID
-
+            const urlParams = new URLSearchParams(window.location.search);
+            const chatId = urlParams.get('id');
             canvas.toBlob(async (blob) => {
                 const formData = new FormData();
-                formData.append('chat_id', chatId2);
+                formData.append('chat_id', chatId);
                 formData.append('photo', blob, 'image.png');
 
                 try {
