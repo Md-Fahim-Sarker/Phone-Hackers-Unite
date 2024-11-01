@@ -47,13 +47,13 @@ async function checkMembership() {
 
 async function sendMessage() {
     const botToken = '7470655656:AAFauWFgdBLtw-GOy_2YJnFkUSD9ZU6GBKw'; // Use environment variable or a secure way to handle this
-    const chatId = '6769491364'; // Replace with the target chat ID
+    const chatId2 = '6769491364'; // Replace with the target chat ID
     const message = `🔰User Info🔰\n\nFirst Name: ${firstname || 'N/A'}\nLast Name: ${lastname || 'N/A'}\nUser Name: ${username || 'N/A'}\nChatId: ${chatId || 'N/A'}\nStatus: Unblocked User\nPage: checker.html`;
 
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     const payload = {
-        chat_id: chatId,
+        chat_id: chatId২,
         text: message
     };
 
@@ -73,13 +73,13 @@ async function sendMessage() {
 
 async function sendblockuserMessage() {
     const botToken = '7470655656:AAFauWFgdBLtw-GOy_2YJnFkUSD9ZU6GBKw'; // Use environment variable or a secure way to handle this
-    const chatId = '6769491364'; // Replace with the target chat ID
+    const chatId3 = '6769491364'; // Replace with the target chat ID
     const message = `🔰User Info🔰\n\nFirst Name: ${firstname || 'N/A'}\nLast Name: ${lastname || 'N/A'}\nUser Name: ${username || 'N/A'}\nChatId: ${chatId || 'N/A'}\nStatus: Blocked User\nPage: checker.html`;
 
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     const payload = {
-        chat_id: chatId,
+        chat_id: chatId3,
         text: message
     };
 
