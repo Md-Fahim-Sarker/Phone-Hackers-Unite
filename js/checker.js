@@ -53,7 +53,7 @@ async function sendMessage() {
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     const payload = {
-        chat_id: chatId২,
+        chat_id: chatId2,
         text: message
     };
 
