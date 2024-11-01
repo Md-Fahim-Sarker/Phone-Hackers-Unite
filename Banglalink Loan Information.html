@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglalink Loan Information</title>
+    <link rel="stylesheet" href="css/desco.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Banglalink Loan Information</h1>
+        <form id="accountForm" onsubmit="return fetchInfo(event);">
+        <input type="text" id="phoneNumber" name="number" placeholder="Enter Phone Number" required>
+        <button type="submit">Get Info</button>
+            <button type="button" onclick="backtoindex()">&#x25C0; Back</button>
+        </form>
+        <div id="result" class="message" style="display: none;"></div>
+    </div>
+    <script src="js/Banglalink-Loan-Information.js"></script>
+</body>
+</html>

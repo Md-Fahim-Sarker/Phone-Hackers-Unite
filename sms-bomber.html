@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagad App Send Money (SS)</title>
+    <link rel="stylesheet" href="css/desco.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1 id="hi-text">💣SMS Bomber💣</h1>
+        <form id="accountForm" onsubmit="return false;">
+            <input type="text" id="number" placeholder="Enter Number" required>
+            <input type="text" id="amount" placeholder="Enter Amount" required>
+            <button type="button" id="drawButton" onclick="startProcess()">Start Bombing</button>
+            <button type="button" onclick="back()">&#x25C0; Back</button>
+        </form>
+        <div id="result" class="message">
+        </div>
+    </div>
+    <script src="js/sms-bomber.js"></script>
+</body>
+</html>
