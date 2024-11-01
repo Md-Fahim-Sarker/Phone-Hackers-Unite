@@ -1,0 +1,56 @@
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #3c003a;
+            color: #ffffff;
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Center content vertically and horizontally */
+            text-align: center; /* Center align text */
+        }
+
+        h1 {
+            font-size: 2.5em; /* Large font size for the main message */
+            margin: 0; /* Remove default margin */
+            animation: fadeIn 1s ease-in-out; /* Fade-in effect */
+        }
+
+        p {
+            font-size: 1.5em; /* Slightly smaller font for the description */
+            margin: 20px 15%; /* Space around the paragraph */
+            opacity: 0.8; /* Slightly transparent */
+            animation: fadeIn 1.5s ease-in-out; /* Fade-in effect */
+        }
+
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: #3c003a; /* Color for the link */
+            background: #ffffff; /* White background for the button */
+            padding: 10px 20px; /* Padding around the button */
+            border-radius: 5px; /* Rounded corners */
+            font-weight: bold; /* Bold text */
+            transition: background 0.3s ease; /* Smooth background transition */
+        }
+
+        a:hover {
+            background: #e0e0e0; /* Change background on hover */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+     h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1em;
+            margin: 20px 20px;
+        }
+        }

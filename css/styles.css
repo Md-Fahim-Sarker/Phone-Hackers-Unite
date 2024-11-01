@@ -1,0 +1,102 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a0022; /* Dark purple background */
+    color: #ffffff; /* White text color */
+    line-height: 1.6;
+}
+
+/* Content container */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #3c003a; /* Slightly lighter purple for content */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+.h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Description line */
+.d1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Line separator */
+.line {
+    height: 2px;
+    background-color: #800080; /* Purple line */
+    margin-bottom: 20px;
+}
+
+/* Group styles */
+.groups {
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    margin-bottom: 20px;
+}
+
+/* Title styles */
+.title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #800080; /* Purple color for titles */
+}
+
+/* Item styles */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: #4b0045; /* Dark item background */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px); /* 4 items per row with spacing */
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    transition: background-color 0.3s;
+    position: relative; /* For badge positioning */
+    height: 120px; /* Fixed height for square buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effect for items */
+.item:hover {
+    background-color: #800080; /* Change background on hover */
+}
+
+/* Badge styles */
+.badge-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.badge {
+    background-color: #ff4081; /* Pink badge */
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
