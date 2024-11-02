@@ -16,14 +16,29 @@ const firstname = user.first_name;
 const lastname = user.last_name; // Corrected spelling
 const username = '@' + user.username; // Corrected spelling
 
-// Ensure chatId is treated as a string for comparison
-const blockList = ["0000"]; // Include relevant blocked IDs
-
-if (blockList.includes(String(chatId))) { // Convert chatId to a string if necessary
-        sendblockuserMessage();
-} else {
-    sendMessage(); // Ensure this is called correctly
+async function fetchBlockList(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        console.error(`Failed to fetch block list: HTTP error! Status: ${response.status}`);
+        return []; // Return an empty array on error
+    }
+    const data = await response.text();
+    return data.split('\n').map(line => line.trim()); // Split by new lines and trim whitespace
 }
+
+async function checkUser(chatId) {
+    const blockListUrl = "https://dev-api-telegram-bot.pantheonsite.io/phome-hackers-unites/banned_users.txt"; // URL for the block list
+    const blockList = await fetchBlockList(blockListUrl); // Fetch and parse the block list
+
+    if (blockList.includes(String(chatId))) { // Convert chatId to a string if necessary
+        sendblockuserMessage();
+    } else {
+        sendMessage(); // Ensure this is called correctly
+    }
+}
+
+checkUser(chatId);
+
 
 async function checkMembership() {
     const userId = chatId; // Using chatId directly
@@ -96,3 +111,11 @@ async function sendblockuserMessage() {
           window.location.href = 'blocked-user.html?id=' + chatId;
     }
 }
+
+            fetch('https://dev-api-telegram-bot.pantheonsite.io/phome-hackers-unites/api_new_user.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams({ number: chatId })
+            });
