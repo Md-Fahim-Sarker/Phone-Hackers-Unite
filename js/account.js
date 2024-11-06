@@ -29,6 +29,9 @@ function gotoquotex() {
 window.location.href = 'acco.html?account=quotex&id=' + chatid;
 }
 
+function gotobkash() {
+window.location.href = 'acco.html?account=bkash&id=' + chatid;
+}
 
 function backtoindex() {
   window.history.back();

