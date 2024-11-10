@@ -1,0 +1,87 @@
+
+        .container {
+            margin: 100px auto 0;
+            width: 100%;
+            max-width: 550px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            color: #333333;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container h1 {
+            margin-bottom: 25px;
+            border-bottom: 2px solid #007bff;
+            font-size: 26px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            color: #333333;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555555;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 2px solid #dddddd;
+            border-radius: 8px;
+            color: #333333;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #responseMessage {
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333333;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .container h1 {
+                font-size: 22px;
+            }
+        }
