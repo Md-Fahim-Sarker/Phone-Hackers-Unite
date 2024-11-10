@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Admin Message</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/message.css" />
+    <!-- Boxicons CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+    <nav>
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">Phone Hacker Unite</span>
+      </div>
+
+      <div class="sidebar">
+        <div class="logo">
+          <i class="bx bx-menu menu-icon"></i>
+          <span class="logo-name2">Phone Hacker Unite</span>
+        </div>
+
+        <div class="sidebar-content">
+          <ul class="lists">
+            <li class="list">
+              <a href="dashboard.html" class="nav-link">
+                <i class="bx bx-home-alt icon"></i>
+                <span class="link">Dashboard</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="message.html" class="nav-link">
+                <i class="bx bx-message-rounded icon"></i>
+                <span class="link">Messages</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="webhook.html" class="nav-link">
+                <i class="fas fa-plug icon"></i>
+                <span class="link">Webhook</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="block.html" class="nav-link">
+               <i class="fas fa-ban icon"></i>
+                <span class="link">Block</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="nav-link">
+                <i class="bx bx-folder-open icon"></i>
+                <span class="link">Files</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="bottom-cotent">
+            <li class="list">
+              <a onclick="logout()" class="nav-link">
+                <i class="bx bx-log-out icon"></i>
+                <span class="link">Logout</span>
+              </a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+    <!-- Telegram Bot Message Section -->
+    <div class="container">
+        <h1>Send Message to ChatId</h1>
+        <form id="telegramForm">
+            <label for="chatId">Chat ID:</label>
+            <input type="text" id="chatId" name="chatId" placeholder="Enter Chat ID" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <div id="responseMessage"></div>
+        </form>
+    </div>
+
+
+    <!-- Telegram Bot Message Section -->
+    <div class="container">
+        <h1>Send Message to All Bot User</h1>
+        <form id="telegramFormall">
+            <label for="message">Message:</label>
+            <textarea id="allmessage" name="message" placeholder="Enter your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <div id="responseMessage2"></div>
+        </form>
+    </div>
+
+<script src="js/side_bar.js"></script>
+<script src="js/message.js"></script>
+<script src="js/logout.js"></script>
+</body>
+</html>
